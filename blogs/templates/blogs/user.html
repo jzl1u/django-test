@@ -1,0 +1,21 @@
+{%load staticfiles%}
+<link rel="stylesheet" href="{% static 'blogs/blog.css' %}" />
+<h1 class="blog-title"> {{user_name}}'s BLOG </h1>
+
+<div class="container">
+{%if blog_list%}
+
+{%for blog in blog_list%}
+	<h2 class="blog-post-title"> {{blog.blog_title}} </h2>
+	<p class="blog-post-meta">{{blog.pub_date}} </p>
+	<p> {{blog.blog_text}} </p>
+{%endfor%}
+{%else%}
+	<p> no blogs</p>
+{%endif%}
+</div>
+<form method='post'>
+{%csrf_token%}
+{{form}}
+<input type="submit" value="save">
+</form>
