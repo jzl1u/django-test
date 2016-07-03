@@ -1,0 +1,9 @@
+{%load staticfiles%}
+<link rel="stylesheet" href="{% static 'blogs/blog.css' %}" />
+
+<form method='post'>
+{%csrf_token%}
+{{form}}
+<input type="submit" name="modify" value="modify"></input>
+<input type="submit" name="remove" value="remove"></input>
+</form>

@@ -6,7 +6,7 @@
 {%if blog_list%}
 
 {%for blog in blog_list%}
-	<h2 class="blog-post-title"> {{blog.blog_title}} </h2>
+	<h2 class="blog-post-title"> <a href="/blogs/{{blog.id}}">{{blog.blog_title}} </a></h2>
 	<p class="blog-post-meta">{{blog.pub_date}} </p>
 	<p> {{blog.blog_text}} </p>
 {%endfor%}
