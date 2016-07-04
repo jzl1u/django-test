@@ -1,9 +1,22 @@
 {%load staticfiles%}
 <link rel="stylesheet" href="{% static 'blogs/blog.css' %}" />
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"> </script>
 
-<h1 class="blog-title">BLOG TEMP </h1>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"> </script>
 
+<div class="masthead">
+	<div class="container">
+		<nav class="blog-nav">
+			<a class="blog-nav-item"> Home</a>
+		</nav>
+	</div>
+</div>
 <div class="container">
+<div class="blog-header">
+<h1 class="blog-title">BLOG TEMP </h1>
+</div>
+<div class="row">
 {%if blog_list%}
 
 {%for blog in blog_list%}
@@ -14,4 +27,5 @@
 {%else%}
 	<p> no blogs</p>
 {%endif%}
+</div>
 </div>
